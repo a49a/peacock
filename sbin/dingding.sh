@@ -12,3 +12,11 @@ curl -s "https://oapi.dingtalk.com/robot/send?access_token=${token}" \
           \n\"
      }
  }"
+
+kdb5_util create -r DTSTACK.COM -s
+
+kadmin.local -q "addprinc spark"
+
+kadmin.local 
+addprinc -randkey hive/eng-cdh3@DTSTACK.COM
+xst -norandkey -k hive-cdh03.keytab hive/eng-cdh3@DTSTACK.COM
