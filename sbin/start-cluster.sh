@@ -6,5 +6,3 @@
   --hiveconf hive.server2.thrift.port=10001 \
   --hiveconf hive.server2.thrift.bind.host=0.0.0.0 \
   --principal hive/eng-cdh3@DTSTACK.COM --keytab hive-cdh03.keytab
-
-
