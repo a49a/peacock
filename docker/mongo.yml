@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:4.2.2
+    restart: always
+    volumes:
+#      - /Users/wolf/foo:/data/db
+      - ~/data/mongo/db:/data/db
+      - ~/data/mongo/configdb:/data/configdb
+    ports:
+      - 27017:27017
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: root

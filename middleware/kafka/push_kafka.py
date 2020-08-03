@@ -8,10 +8,12 @@ SERVERS = "localhost:9092"
 TOPIC = "wuren_foo"
 
 producer = KafkaProducer(bootstrap_servers=SERVERS, value_serializer=serializer)
-for x in range(2):
+for x in range(3):
     d = {
-        "id": x,
-        "name": "test"
+        "id": str(x),
+        "name": "n",
+        "ct": "TEST"
     }
+    print(serializer(d))
     producer.send(TOPIC, d)
 producer.flush()
