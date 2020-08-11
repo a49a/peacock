@@ -1,0 +1,10 @@
+bash submit.sh
+    -mode yarnPer
+    -name wuren_test
+    -sql /Users/luna/src/frigate/sql/base.sql
+    -localSqlPluginPath /Users/luna/src/dtstack/flinkStreamSQL/sqlplugins
+    -flinkconf /home/wen/Desktop/flink_stream_sql_conf/flinkConf
+    -yarnconf /home/wen/Desktop/flink_stream_sql_conf/yarnConf_node1
+    -flinkJarPath /home/wen/Desktop/dtstack/flink-1.8.1/lib
+    -pluginLoadMode shipfile
+    -confProp {\"sql.checkpoint.cleanup.mode\":\"false\",\"job.priority\":\"10\",\"time.characteristic\":\"EventTime\",\"slots\":\"1\",\"sql.checkpoint.interval\":\"60000\",\"sql.env.parallelism\":\"1\"}

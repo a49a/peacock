@@ -9,3 +9,7 @@ r.hset(
     'ct',
     'foo_r'
 )
+
+r.hmset('2', {
+    'ct': 'slink_niubi'
+})
