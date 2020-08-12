@@ -70,3 +70,6 @@ DROP FUNCTION EUPPER;
 ./start-thriftserver.sh --master local --conf spark.driver.memory=1G --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 --name  --executor-memory 1G --num-executors 2 --name ThriftServer246
 
 SELECT EUPPER(name) FROM w_ods;
+
+ tar -zxf jdk-8u181-linux-x64.tar.gz 
+  tar -zxf /data/archive/jdk-8u181-linux-x64.tar.gz -C /usr/java/
