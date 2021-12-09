@@ -1,0 +1,1 @@
+bin/zkCli.sh -server kudu1:2181

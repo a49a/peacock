@@ -1,9 +1,23 @@
 version: '3'
 
 services:
-  redis:
-    image: prom/prometheus:v2.20.1
+  prometheus:
+    image: prom/prometheus:v2.24.1
     environment:
       - TZ=Asia/Shanghai
     ports:
       - 9090:9090
+    volumes:
+      - ~/etc/prom/prometheus.yml:/etc/prometheus/prometheus.yml
+  pushgateway:
+    image: prom/pushgateway:v1.4.0
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9091:9091
+  grafana:
+    image: grafana/grafana:7.3.7
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 3000:3000

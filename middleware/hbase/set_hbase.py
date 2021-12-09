@@ -5,7 +5,7 @@ connection = happybase.Connection('kudu1')
 table = connection.table('wuren_foo')
 
 
-table.put(b'0_n', {b'cf0:name': b'foo',
-                       b'cf0:ct': b'TEST_hbase'})
+table.put(b'2_k', {b'cf0:name': b'bar',
+                       b'cf0:ct': b'TEST_h3'})
 
 # row = table.delete(b'row-key')

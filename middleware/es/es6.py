@@ -1,15 +1,15 @@
 from datetime import datetime
 from elasticsearch6 import Elasticsearch
-es = Elasticsearch()
+es = Elasticsearch({"172.16.100.186":"9200"})
 
 doc = {
-    'id': 0,
-    'name': 'foo'
+    'id': 2,
+    'name': "乙"
 }
-ID = 1
-INDEX = "foo_index"
-DOC_TYPE = "foo_type"
-res = es.delete(index=INDEX, doc_type=DOC_TYPE, id=ID)
+ID = 2
+INDEX = "wuren"
+DOC_TYPE = "cn"
+# res = es.delete(index=INDEX, doc_type=DOC_TYPE, id=ID)
 es.create(index=INDEX, doc_type=DOC_TYPE, id=ID, body=doc)
 
 # res = es.delete(index=INDEX, doc_type=DOC_TYPE, id=2)
@@ -19,5 +19,3 @@ print(res)
 
 # res = es.get(index=InterruptedError, id=1, doc_type=DOC_TYPE)
 # print(res['_source'])
-
-

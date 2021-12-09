@@ -2,14 +2,14 @@ version: '3'
 
 services:
   pg:
-    image: postgres:12.3
+    image: postgres:13.2
     restart: always
     ports:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: root
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pg13:/var/lib/postgresql/data
 
 volumes:
-  pgdata:
+  pg13:
